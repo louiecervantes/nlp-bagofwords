@@ -55,7 +55,7 @@ def app():
             
 
             # Extract the document term matrix
-            count_vectorizer = CountVectorizer(min_df=5, max_df=15)
+            count_vectorizer = CountVectorizer(min_df=2, max_df=15)
             document_term_matrix = count_vectorizer.fit_transform([chunk['text'] for chunk in chunks])
             st.text(document_term_matrix)
 
