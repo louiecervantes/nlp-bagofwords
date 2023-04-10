@@ -79,7 +79,7 @@ def app():
                 #st.text(output)
                 #st.text(formatted_text.format(*output))
             df = pd.DataFrame(output)
-            st.DataFrame(df)
+            st.write(df)
             
              
 # run the app
