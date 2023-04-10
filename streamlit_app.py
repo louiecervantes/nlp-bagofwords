@@ -45,11 +45,11 @@ def app():
             # Define the number of words in each chunk
             chunk_size = 60
             
-            chunks = chunker(user_input, chunk_size)
+            text_chunks = chunker(user_input, chunk_size)
 
             # Convert to dict items
             chunks = []
-            for count, chunk in enumerate(chunks):
+            for count, chunk in enumerate(text_chunks):
                 d = {'index': count, 'text': chunk}
                 chunks.append(d)
             st.text('chunks = ' + str(len(chunks)))
