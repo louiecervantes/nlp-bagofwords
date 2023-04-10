@@ -69,9 +69,7 @@ def app():
 
             # Print the document term matrix
             st.text("\nDocument term matrix:")
-                       
-            st.text('\n' + formatted_text.format('Word', *chunk_names) + '\n')
-            
+                               
             output = []  
             output.append(['Word'] + [chunkname for chunkname in chunk_names])
             for word, item in zip(vocabulary, document_term_matrix.T):             
