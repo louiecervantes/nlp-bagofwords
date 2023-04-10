@@ -43,7 +43,7 @@ def app():
         if st.button('Submit'):    
                    
             # Define the number of words in each chunk
-            chunk_size = 400
+            chunk_size = 300
             
             text_chunks = chunker(user_input, chunk_size)
 
@@ -71,9 +71,7 @@ def app():
             formatted_text = '{:>12}' * (len(chunk_names) + 1)
                        
             st.text('\n' + formatted_text.format('Word', *chunk_names) + '\n')
-            
-            st.text(document_term_matrix.T)
-            
+                    
             for word, item in zip(vocabulary, document_term_matrix.T):             
                 # 'item' is a 'csr_matrix' data structure
                 output = [word] + [str(freq) for freq in item.data]
