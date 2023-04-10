@@ -76,7 +76,7 @@ def app():
                 # 'item' is a 'csr_matrix' data structure
                 output.append([word] + [str(freq) for freq in item.data])
                 #st.text(output)
-                st.text(formatted_text.format(*output))
+                #st.text(formatted_text.format(*output))
             st.text(output)
              
 # run the app
