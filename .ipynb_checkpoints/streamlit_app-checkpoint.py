@@ -43,7 +43,7 @@ def app():
         if st.button('Submit'):    
                    
             # Define the number of words in each chunk
-            chunk_size = 300
+            chunk_size = 600
             
             text_chunks = chunker(user_input, chunk_size)
 
