@@ -49,7 +49,7 @@ def app():
 
             # Convert to dict items
             chunks = []
-            for count, chunk in enumerate(text_chunks):
+            for count, chunk in enumerate(chunks):
                 d = {'index': count, 'text': chunk}
                 chunks.append(d)
 
