@@ -77,7 +77,8 @@ def app():
             for word, item in zip(vocabulary, document_term_matrix.T):             
                 # 'item' is a 'csr_matrix' data structure
                 output = [word] + [str(freq) for freq in item.data]
-                #st.text(formatted_text.format(*output))
+                st.text(output)
+            #st.text(formatted_text.format(*output))
              
 # run the app
 if __name__ == "__main__":
