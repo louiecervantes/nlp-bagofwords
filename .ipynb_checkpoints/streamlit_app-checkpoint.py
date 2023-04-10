@@ -71,12 +71,13 @@ def app():
             formatted_text = '{:>12}' * (len(chunk_names) + 1)
                        
             st.text('\n' + formatted_text.format('Word', *chunk_names) + '\n')
-                    
+            output = []   
             for word, item in zip(vocabulary, document_term_matrix.T):             
                 # 'item' is a 'csr_matrix' data structure
-                output = [word] + [str(freq) for freq in item.data]
+                output.append([word] + [str(freq) for freq in item.data])
                 #st.text(output)
                 st.text(formatted_text.format(*output))
+            st.text(output)
              
 # run the app
 if __name__ == "__main__":
