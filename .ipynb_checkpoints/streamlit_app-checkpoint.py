@@ -52,11 +52,12 @@ def app():
             for count, chunk in enumerate(text_chunks):
                 d = {'index': count, 'text': chunk}
                 chunks.append(d)
-            st.text('chunks = ' + str(len(chunks)))
+            
 
             # Extract the document term matrix
-            count_vectorizer = CountVectorizer(min_df=3, max_df=10)
+            count_vectorizer = CountVectorizer(min_df=5, max_df=15)
             document_term_matrix = count_vectorizer.fit_transform([chunk['text'] for chunk in chunks])
+            st.text(document_term_matrix)
 
             # Extract the vocabulary and display it
             vocabulary = np.array(count_vectorizer.get_feature_names())
