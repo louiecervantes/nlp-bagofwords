@@ -52,6 +52,7 @@ def app():
             for count, chunk in enumerate(chunks):
                 d = {'index': count, 'text': chunk}
                 chunks.append(d)
+            st.text('chunks = ' + str(len(chunks)))
 
             # Extract the document term matrix
             count_vectorizer = CountVectorizer(min_df=3, max_df=10)
