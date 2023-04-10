@@ -80,7 +80,7 @@ def app():
                 
                 st.text(output)
                 
-                st.text(formatted_text.format(*output))
+                #st.text(formatted_text.format(*output))
              
 # run the app
 if __name__ == "__main__":
