@@ -52,10 +52,6 @@ def app():
             for count, chunk in enumerate(text_chunks):
                 d = {'index': count, 'text': chunk}
                 chunks.append(d)
-            
-            for chunk in chunks:
-                st.text(chunk)
-                
 
             # Extract the document term matrix
             count_vectorizer = CountVectorizer(min_df=2, max_df=15)
@@ -79,10 +75,7 @@ def app():
             for word, item in zip(vocabulary, document_term_matrix.T):             
                 # 'item' is a 'csr_matrix' data structure
                 output = [word] + [str(freq) for freq in item.data]
-                
-                st.text(output)
-                
-                #st.text(formatted_text.format(*output))
+                st.text(formatted_text.format(*output))
              
 # run the app
 if __name__ == "__main__":
