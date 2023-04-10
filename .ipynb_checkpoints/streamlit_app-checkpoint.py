@@ -4,6 +4,7 @@ import altair as alt
 import nltk
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
+import pandas as pd
 
 def chunker(input_data, N):
     input_words = input_data.split(' ')
