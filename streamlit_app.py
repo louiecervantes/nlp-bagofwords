@@ -57,10 +57,9 @@ def app():
             # Extract the document term matrix
             count_vectorizer = CountVectorizer(min_df=2, max_df=15)
             document_term_matrix = count_vectorizer.fit_transform([chunk['text'] for chunk in chunks])
-            st.text(document_term_matrix)
 
             # Extract the vocabulary and display it
-            vocabulary = np.array(count_vectorizer.get_feature_names())
+            vocabulary = np.array(count_vectorizer.get_feature_names_out())
             st.text("\nVocabulary:\n", vocabulary)
             
             # Generate names for chunks
