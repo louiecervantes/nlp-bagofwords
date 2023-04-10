@@ -71,7 +71,7 @@ def app():
             st.text("\nDocument term matrix:")
             formatted_text = '{:>12}' * (len(chunk_names) + 1)
             
-            st.text(formatted_text)
+            st.text((len(chunk_names) + 1)
             
             st.text('\n' + formatted_text.format('Word', *chunk_names) + '\n')
             
