@@ -16,7 +16,7 @@ def chunker(input_data, N):
         if count == N:
             output.append(' '.join(cur_chunk))
             count, cur_chunk = 0, []
-            output.append(' '.join(cur_chunk))
+    output.append(' '.join(cur_chunk))
     return output
 
 # Define the Streamlit app
