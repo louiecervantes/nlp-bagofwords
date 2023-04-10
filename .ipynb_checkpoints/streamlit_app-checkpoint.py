@@ -54,7 +54,7 @@ def app():
                 chunks.append(d)
 
             # Extract the document term matrix
-            count_vectorizer = CountVectorizer(min_df=2, max_df=15)
+            count_vectorizer = CountVectorizer(min_df=7, max_df=30)
             document_term_matrix = count_vectorizer.fit_transform([chunk['text'] for chunk in chunks])
             
             # Extract the vocabulary and display it
