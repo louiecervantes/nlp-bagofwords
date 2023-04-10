@@ -70,13 +70,10 @@ def app():
             # Print the document term matrix
             st.text("\nDocument term matrix:")
             formatted_text = '{:>12}' * (len(chunk_names) + 1)
-            
-            st.text('output: ' + str(len(chunk_names) + 1))
-            
+                       
             st.text('\n' + formatted_text.format('Word', *chunk_names) + '\n')
             
-            for word, item in zip(vocabulary, document_term_matrix.T):
-                
+            for word, item in zip(vocabulary, document_term_matrix.T):             
                 # 'item' is a 'csr_matrix' data structure
                 output = [word] + [str(freq) for freq in item.data]
                 
