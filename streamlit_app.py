@@ -77,7 +77,9 @@ def app():
                 output.append([word] + [str(freq) for freq in item.data])
                 #st.text(output)
                 #st.text(formatted_text.format(*output))
-            st.text(output)
+            df = pd.DataFrame(output)
+            st.DataFrame(df)
+            
              
 # run the app
 if __name__ == "__main__":
