@@ -60,7 +60,7 @@ def app():
 
             # Extract the vocabulary and display it
             vocabulary = np.array(count_vectorizer.get_feature_names_out())
-            st.text("\nVocabulary:\n" + vocabulary)
+            st.text(vocabulary)
             
             # Generate names for chunks
             chunk_names = []
